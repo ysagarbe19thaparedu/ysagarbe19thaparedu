@@ -1,0 +1,87 @@
+<html>
+<head>
+<style>
+body{
+background-color:LightGray}
+.index{
+border:1px solid white;
+
+
+color:white;
+
+background-color:gray;
+text-align:center;
+height:250px;
+width:500px;
+margin-left:500px;
+margin-top:150px;
+postion:relative;
+
+
+}
+.header{
+margin-left:600px;
+font-size:40px;
+margin-top:150px;
+}
+.button{
+height:20px;
+
+
+}
+.index1{
+font-size:40px;
+}
+.form-control{
+height:30px;
+margin-bottom:10px;
+padding-top:15px;
+}
+
+.footer{
+margin-left:650px;
+}
+
+</style>
+</head>
+<body>
+
+<div class="header"> BMI CALCULATOR</div>
+<div class ="index">
+
+<form>
+<div class="index1">
+<label> Weight</label>
+<input type="number" name="bmi" id="weight" placeholder ="in Kg"class="form-control" >
+</div>
+<div class="index1">
+<label> Height</label>
+<input type="number" name="bmi" id="height" placeholder= " in ft"class="form-control" >
+</div>
+<div class="index1">
+<label> Bmi value</label>
+<input type="number" name="bmi" id="bmivalue"class="form-control" >
+</div>
+<div> <button type="submit" class="button" onclick="getbmivalue()">check BMI</button>
+</div>
+</form>
+</div>
+
+<div class="footer"> a healthy BMi ranges between 19-25</div>
+<script>
+ function getbmivalue(){
+ weight=document.getElementById('weight').value;
+ height=document.getElementById('height').value;
+ height=height*12;
+ height=height*0.025;
+ var newbmical=weight/(height*height);
+ document.getElementById('bmivalue').value = newbmical;
+ }
+</script>
+
+
+
+
+
+</body>
+</html>
